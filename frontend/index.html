@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Writer - Content Generation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="sparkle">✨</span>
+                <h1>AI Writer</h1>
+            </div>
+            <p class="subtitle">Generate high-quality content with AI-powered writing tools</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs">
+            <button class="tab active" data-tab="blog">📝 Blog Writing</button>
+            <button class="tab" data-tab="email">✉️ Email/Letter</button>
+            <button class="tab" data-tab="copy">📢 Copy Writing</button>
+            <button class="tab" data-tab="seo">🔍 SEO Content</button>
+            
+            <button class="tab" data-tab="summarize">💬 Summarizer</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="input-section">
+                <label for="userInput" id="inputLabel">Enter your topic or requirements:</label>
+                <textarea 
+                    id="userInput" 
+                    placeholder="E.g., 'Enter a detailed prompt'"
+                    rows="5"
+                ></textarea>
+            </div>
+
+            <button id="generateBtn" class="generate-btn">
+                <span class="btn-icon">✨</span>
+                <span class="btn-text">Generate Content</span>
+            </button>
+
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+            <div id="outputSection" class="output-section" style="display: none;">
+                <div class="output-header">
+                    <label>Generated Content:</label>
+                    <div class="action-buttons">
+                        <button id="copyBtn" class="action-btn">📋 Copy</button>
+                        <button id="downloadBtn" class="action-btn download">💾 Download</button>
+                    </div>
+                </div>
+                <div id="output" class="output-content"></div>
+            </div>
+        </main>
+
+        <!-- Info Card -->
+        <div class="info-card">
+            <h3>📚 How to use:</h3>
+            <ol>
+                <li>Select the type of content you want to generate</li>
+                <li>Enter your topic or requirements in the text area</li>
+                <li>Click "Generate Content" and wait for AI to create your content</li>
+                <li>Copy or download the generated content</li>
+            </ol>
+            <p class="note">
+                <strong>⚙️ Note:</strong> Make sure the backend server is running on port 5000.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
